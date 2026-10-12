@@ -1,21 +1,45 @@
-# Chef's Menu Manager
+# MAST5112-Part-2
 
-A simple Expo and React Native app for entering dishes and viewing the current menu.
+Chef's Menu Manager is a mobile application for entering dishes, adding them to a menu list, and viewing the current menu with a clean restaurant-inspired design.
 
-## Requirements
+## Project overview
 
-- Node.js (LTS)
-- npm
-- Expo Go on a phone, or an Android/iOS simulator
+This app allows a chef to:
+
+- Enter a dish name
+- Add a short description
+- Select the course type
+- Enter a valid South African Rand price
+- Submit the form with validation
+- View all added dishes in a scrollable menu list
+- See an empty-state message when no menu items exist
+
+## Features included
+
+- Required field validation and clear error messages
+- Space-only input rejection for name and description
+- Course selection validation
+- Positive price validation for decimals such as 89.99
+- Success confirmation after valid submission
+- Menu count updates automatically
+- Empty-state message when the list is empty
+- Consistent mobile layout and styling throughout the app
 
 ## Run the app
 
-1. Install the dependencies with `npm install`.
-2. Start the Expo development server with `npm start`.
-3. Scan the QR code using Expo Go, or press `a`/`i` to open an installed simulator.
+1. Open the project folder in a terminal.
+2. Run `npm install`.
+3. Run `npm start`.
+4. Launch the app with Expo Go, an Android emulator, or an iOS simulator.
 
-To check the TypeScript code, run `npm run typecheck`.
+## Type check
 
-## How it works
+Run:
 
-Complete the dish name, description, course, and price fields, then select **Add Menu Item**. The form displays field-specific validation errors and preserves entered values when invalid. After a valid submission, the app adds the dish to the current menu, displays a confirmation, and updates the dish count. Menu entries are held in application state for the current app session; they are not persisted after restarting the app.
+```bash
+npm run typecheck
+```
+
+## Notes
+
+The app stores menu items in local state during the current session. It does not include editing, deletion, search, filtering, or statistics, as those are reserved for the final PoE.
